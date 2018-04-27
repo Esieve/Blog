@@ -10,8 +10,7 @@ import java.sql.SQLException;
 public class DBUtil {
     public static Connection getCon() throws ClassNotFoundException, SQLException {
         Class.forName(PropertiesUtil.getValue("jdbcName"));
-        Connection conn = null;
-        conn = DriverManager.getConnection(
+        Connection conn = DriverManager.getConnection(
                 PropertiesUtil.getValue("dbUrl"),
                 PropertiesUtil.getValue("dbUserName"),
                 PropertiesUtil.getValue("dbPassword")
